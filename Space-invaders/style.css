@@ -3,3 +3,12 @@
     height: 600px;
     width: 600px;
 }
+
+#spaceship {
+    background-image: url(assets/spaceship.png);
+    height: 78px;
+    width: 99px;
+    position: absolute;
+    top: 500px;
+    left: 265px;
+}
