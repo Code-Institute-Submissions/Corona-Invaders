@@ -15,11 +15,11 @@
 
 .blue-corona {
     background-image: url(assets/blue-corona.png);
-    height: 95px;
+    height: 100px;
     width: 99px;
     position: absolute;
-    bottom: 450px;
-    left: 200px;
+    bottom: 550px;
+    left: 460px;
 }
 
 .green-corona {
