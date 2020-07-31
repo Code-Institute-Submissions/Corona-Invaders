@@ -1,7 +1,7 @@
 
 //javascript code to reposition spaceship to the left and the right. 
 
-var spaceship = {
+var spaceShip = {
     top: 500,
     left: 265
 };
@@ -11,16 +11,16 @@ document.onkeydown = function(e) {
 
 if (e.keyCode == 37){
     console.log("LEFT");
-    spaceship.left = spaceship.left - 10;
-    moveSpaceship()
+    spaceShip.left = spaceShip.left - 10;
+    moveSpaceShip()
 }
 else if (e.keyCode == 39){
     console.log("RIGHT");
-    spaceship.left = spaceship.left + 10;
-    moveSpaceship()
+    spaceShip.left = spaceShip.left + 10;
+    moveSpaceShip()
 }
 }
 
-function movespaceship() {
-   document.getElementById("spaceship").style.left = spaceship.left + "px";
+function moveSpaceShip() {
+   document.getElementById("spaceShip").style.left = spaceShip.left + "px";
 }
