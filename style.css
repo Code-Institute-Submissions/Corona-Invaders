@@ -13,7 +13,7 @@
     left: 265px;
 }
 
-.blue-Corona {
+.blueCorona {
     background-image: url(assets/blue-Corona.png);
     height: 42px;
     width: 41px;
@@ -22,20 +22,16 @@
     left: 300px;
 }
 
-#red-Lasers {
-    background-image: url(assets/red-Laser.png);
+#redLasers {
     height: 600px;
     width: 600px;
     position: absolute;
 }
 
-.red-Laser {
+.redLaser {
     background-image: url(assets/red-Laser.png);
     height: 57px;
     width: 9px;
-    position: absolute;
-    bottom: 200px;
-    left: 310px;
 }
 
 
