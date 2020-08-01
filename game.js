@@ -45,7 +45,7 @@ function drawRedLasers () {
 }
 }
 
-//Because my screen scrolls down when I pressed the spacebar, I used this code to fix that
+//Because my page scrolls down when I pressed the spacebar, I used this code to fix that:
 window.onkeydown = function(e) { 
   return !(e.keyCode == 32);
 };
