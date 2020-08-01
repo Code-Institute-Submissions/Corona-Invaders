@@ -25,10 +25,11 @@ else if (e.keyCode == 39){
 // Red laser 
 else if (e.keyCode == 32){
     console.log("FIRE");
-    redLaser.push ({
+    redLasers.push ({
         left: spaceShip.left + 15,
         top: spaceShip.top
     })
+    drawRedLasers()
 }
 }
 
@@ -36,9 +37,15 @@ function moveSpaceShip() {
    document.getElementById("spaceShip").style.left = spaceShip.left + "px";
 }
 
-function drawredLasers () {
+function drawRedLasers () {
     document.getElementById("redLasers").innerHTML= "";
     for (var redLaser = 0; redLaser < redLasers.length; redLaser = redLaser + 1){
-
-    }
+    document.getElementById("redLasers").innerHTML +=
+    "<div class='redLaser' style='left ${redLasers[redLaser].left}px; top:${redLasers[redLaser].top}px;'></div>";
 }
+}
+
+//Because my screen scrolls down when I pressed the spacebar, I used this code to fix that
+window.onkeydown = function(e) { 
+  return !(e.keyCode == 32);
+};

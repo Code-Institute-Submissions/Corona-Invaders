@@ -32,6 +32,10 @@
     background-image: url(assets/red-Laser.png);
     height: 57px;
     width: 9px;
+    position: absolute;
+    bottom: 730px;
+    left: 300px;
 }
+
 
 
