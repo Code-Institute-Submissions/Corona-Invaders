@@ -6,7 +6,7 @@ var spaceShip = {
     left: 265
 };
 
-var redLaser = [];
+var redLasers = [];
 
 document.onkeydown = function(e) {
     console.log(e.keyCode);
@@ -36,7 +36,7 @@ function moveSpaceShip() {
    document.getElementById("spaceShip").style.left = spaceShip.left + "px";
 }
 
-function drawredLaser () {
+function drawredLasers () {
     document.getElementById("redLasers").innerHTML= "";
     for (var redLaser = 0; redLaser < redLasers.length; redLaser = redLaser + 1){
 
