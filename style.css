@@ -22,8 +22,20 @@
     left: 300px;
 }
 
-.blue-Laser {
-    background-image: url(assets/blue-Laser.png);
-    height: 42px;
-    width: 41px;
+#red-Lasers {
+    background-image: url(assets/red-Laser.png);
+    height: 600px;
+    width: 600px;
+    position: absolute;
 }
+
+.red-Laser {
+    background-image: url(assets/red-Laser.png);
+    height: 57px;
+    width: 9px;
+    position: absolute;
+    bottom: 200px;
+    left: 310px;
+}
+
+
