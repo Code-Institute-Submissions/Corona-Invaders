@@ -13,48 +13,17 @@
     left: 265px;
 }
 
-.blue-corona {
-    background-image: url(assets/blue-corona.png);
-    height: 100px;
-    width: 99px;
+.blue-Corona {
+    background-image: url(assets/blue-Corona.png);
+    height: 42px;
+    width: 41px;
     position: absolute;
-    bottom: 550px;
-    left: 460px;
+    bottom: 600px;
+    left: 300px;
 }
 
-.green-corona {
-    background-image: url(assets/green-corona.png);
-    height: 95px;
-    width: 99px;
-    position: absolute;
-    bottom: 10px;
-    right: 300px;
-}
-
-.orange-corona {
-    background-image: url(assets/orange-corona.png);
-    height: 95px;
-    width: 99px;
-    position: absolute;
-    bottom: 10px;
-    left: 145px;
-}
-
-.yellow-corona {
-    background-image: url(assets/yellow-corona.png);
-    height: 61px;
-    width: 99px;
-    position: absolute;
-    bottom: 5px;
-    right: 280px;
-}
-
-
-.blue-corona2 {
-    background-image: url(assets/blue-corona.png);
-    height: 95px;
-    width: 99px;
-    position: absolute;
-    bottom: 450px;
-    left: 200px;
+.blue-Laser {
+    background-image: url(assets/blue-Laser.png);
+    height: 42px;
+    width: 41px;
 }
