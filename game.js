@@ -6,12 +6,12 @@ window.onkeydown = function(e) {
 
 //Javascript code to * reposition spaceship to the left and the right * Draw red Lasers
 
-var spaceShip = {
+var spaceship = {
     top: 500,
     left: 265
 };
-var redLasers = [];
-var blueCoronas = [
+var lasers = [];
+var coronas = [
             { left: 200, bottom: 100 },
             { left: 300, bottom: 100 },
             { left: 400, bottom: 100 },
@@ -28,64 +28,64 @@ document.onkeydown = function(e) {
 
 if (e.keyCode == 37){
     console.log("LEFT");
-    spaceShip.left = spaceShip.left - 15;
-    moveSpaceShip()
+    spaceship.left = spaceship.left - 15;
+    moveSpaceship()
 }
 else if (e.keyCode == 39){
     console.log("RIGHT");
-    spaceShip.left = spaceShip.left + 15;
-    moveSpaceShip()
+    spaceship.left = spaceship.left + 15;
+    moveSpaceship()
 }
 
 else if (e.keyCode == 32){
     console.log("FIRE");
-    redLasers.push ({
-        left: spaceShip.left + 15,
-        top: spaceShip.top
+    lasers.push ({
+        left: spaceship.left + 15,
+        top: spaceship.top
     });
-    drawRedLasers()
+    drawLasers()
 }
-drawSpaceShip();
-}
-
-function moveSpaceShip() {
-   document.getElementById("spaceShip").style.left = spaceShip.left + "px";
+moveSpaceship();
 }
 
-function drawRedLasers() {
-    document.getElementById("redLasers").innerHTML=""
-    for (var i = 0 ; i < redLasers.length; i++) {
-    document.getElementById("redLasers").innerHTML +=
-    "<div class='redLaser' style='left:${redLasers[redLaser].left}px; top:${redLasers[redLaser].top}px;'></div>";
+function moveSpaceship() {
+   document.getElementById("spaceship").style.left = spaceship.left + "px";
+}
+
+function drawLasers() {
+    document.getElementById("lasers").innerHTML=""
+    for (var i = 0 ; i < lasers.length; i++) {
+    document.getElementById("lasers").innerHTML +=
+    "<div class='laser' style='left:${lasers[laser].left}px; top:${lasers[laser].top}px;'></div>";
 }
 }
 
-function moveRedLasers() {
-            for(var i = 0 ; i < redLasers.length ; i++ ) {
-                redLasers[i].top = redLasers[i].top - 8
+function moveLasers() {
+            for(var i = 0 ; i < lasers.length ; i++ ) {
+                lasers[i].top = lasers[i].top - 8
             }
         }
 
-function drawBlueCoronas() {
-    document.getElementById("blueCoronas").innerHTML=""
-    for (var i = 0 ; i < blueCoronas.length; i++) {
-    document.getElementById("blueCoronas").innerHTML +=
-    "<div class='blueCorona' style='left:${blueCoronas[blueCorona].left}px; top:${blueCoronas[blueCorona].top}px;'></div>";
+function drawCoronas() {
+    document.getElementById("coronas").innerHTML=""
+    for (var i = 0 ; i < coronas.length; i++) {
+    document.getElementById("coronas").innerHTML +=
+    "<div class='corona' style='left:${coronas[blueCorona].left}px; top:${coronas[corona].top}px;'></div>";
 }
 }
 
-function moveBlueCoronas() {
-for (var i = 0 ; i < blueCoronas.length; i++) {
-    blueCoronas[i].top = blueCoronas[i].top + 1;
+function moveCoronas() {
+for (var i = 0 ; i < coronas.length; i++) {
+    coronas[i].top = coronas[i].top + 1;
 }
 }
 
 function gameLoop() {
             setTimeout(gameLoop, 1000)
-            moveRedLasers();
-            drawRedLasers();
-            drawBlueCoronas();
-            moveBlueCoronas();
+            moveLasers();
+            drawLasers();
+            drawCoronas();
+            moveCoronas();
 }
 
 gameLoop()
