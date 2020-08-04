@@ -29,12 +29,12 @@ document.onkeydown = function(e) {
 if (e.keyCode == 37){
     console.log("LEFT");
     spaceship.left = spaceship.left - 15;
-    moveSpaceship()
+    moveSpaceship();
 }
 else if (e.keyCode == 39){
     console.log("RIGHT");
     spaceship.left = spaceship.left + 15;
-    moveSpaceship()
+    moveSpaceship();
 }
 
 else if (e.keyCode == 32){
@@ -43,17 +43,17 @@ else if (e.keyCode == 32){
         left: spaceship.left + 15,
         top: spaceship.top
     });
-    drawLasers()
+    drawLasers();
 }
 moveSpaceship();
-}
+};
 
 function moveSpaceship() {
    document.getElementById("spaceship").style.left = spaceship.left + "px";
 }
 
 function drawLasers() {
-    document.getElementById("lasers").innerHTML=""
+    document.getElementById("lasers").innerHTML="";
     for (var i = 0 ; i < lasers.length; i++) {
     document.getElementById("lasers").innerHTML +=
     "<div class='laser' style='left:${lasers[laser].left}px; top:${lasers[laser].top}px;'></div>";
@@ -62,12 +62,12 @@ function drawLasers() {
 
 function moveLasers() {
             for(var i = 0 ; i < lasers.length ; i++ ) {
-                lasers[i].top = lasers[i].top - 8
+                lasers[i].top = lasers[i].top - 8;
             }
         }
 
 function drawCoronas() {
-    document.getElementById("coronas").innerHTML=""
+    document.getElementById("coronas").innerHTML="";
     for (var i = 0 ; i < coronas.length; i++) {
     document.getElementById("coronas").innerHTML +=
     "<div class='corona' style='left:${coronas[blueCorona].left}px; top:${coronas[corona].top}px;'></div>";
@@ -81,11 +81,11 @@ for (var i = 0 ; i < coronas.length; i++) {
 }
 
 function gameLoop() {
-            setTimeout(gameLoop, 1000)
+            setTimeout(gameLoop, 1000);
             moveLasers();
             drawLasers();
             drawCoronas();
             moveCoronas();
 }
 
-gameLoop()
+gameLoop();
