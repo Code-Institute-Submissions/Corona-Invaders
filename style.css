@@ -13,6 +13,13 @@
     left: 265px;
 }
 
+#blueCoronas {
+    background-image: url(assets/blue-Corona.png);
+    height: 42px;
+    width: 41px;
+    position: absolute;
+}
+
 .blueCorona {
     background-image: url(assets/blue-Corona.png);
     height: 42px;

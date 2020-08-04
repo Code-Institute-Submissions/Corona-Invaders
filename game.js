@@ -12,22 +12,14 @@ var spaceShip = {
 };
 var redLasers = [];
 var blueCoronas = [
-            { left: 200, top: 100 },
-            { left: 300, top: 100 },
-            { left: 400, top: 100 },
-            { left: 500, top: 100 },
-            { left: 600, top: 100 },
-            { left: 700, top: 100 },
-            { left: 800, top: 100 },
-            { left: 900, top: 100 },
-            { left: 200, top: 175 },
-            { left: 300, top: 175 },
-            { left: 400, top: 175 },
-            { left: 500, top: 175 },
-            { left: 600, top: 175 },
-            { left: 700, top: 175 },
-            { left: 800, top: 175 },
-            { left: 900, top: 175 }
+            { left: 200, bottom: 100 },
+            { left: 300, bottom: 100 },
+            { left: 400, bottom: 100 },
+            { left: 500, bottom: 100 },
+            { left: 600, bottom: 100 },
+            { left: 200, bottom: 175 },
+            { left: 300, bottom: 175 },
+            { left: 400, bottom: 175 },
         ];
 
 
@@ -36,12 +28,12 @@ document.onkeydown = function(e) {
 
 if (e.keyCode == 37){
     console.log("LEFT");
-    spaceShip.left = spaceShip.left - 10;
+    spaceShip.left = spaceShip.left - 15;
     moveSpaceShip()
 }
 else if (e.keyCode == 39){
     console.log("RIGHT");
-    spaceShip.left = spaceShip.left + 10;
+    spaceShip.left = spaceShip.left + 15;
     moveSpaceShip()
 }
 
@@ -50,12 +42,11 @@ else if (e.keyCode == 32){
     redLasers.push ({
         left: spaceShip.left + 15,
         top: spaceShip.top
-    })
+    });
     drawRedLasers()
 }
+drawSpaceShip();
 }
-
-
 
 function moveSpaceShip() {
    document.getElementById("spaceShip").style.left = spaceShip.left + "px";
@@ -63,7 +54,7 @@ function moveSpaceShip() {
 
 function drawRedLasers() {
     document.getElementById("redLasers").innerHTML=""
-    for (var redLaser = 0; redLaser < redLasers.length; redLaser = redLaser + 1){
+    for (var i = 0 ; i < redLasers.length; i++) {
     document.getElementById("redLasers").innerHTML +=
     "<div class='redLaser' style='left:${redLasers[redLaser].left}px; top:${redLasers[redLaser].top}px;'></div>";
 }
@@ -75,11 +66,17 @@ function moveRedLasers() {
             }
         }
 
-function drawCorona() {
+function drawBlueCoronas() {
     document.getElementById("blueCoronas").innerHTML=""
-    for (var blueCorona = 0; blueCorona < blueCoronas.length; blueCorona = blueCorona + 1){
+    for (var i = 0 ; i < blueCoronas.length; i++) {
     document.getElementById("blueCoronas").innerHTML +=
     "<div class='blueCorona' style='left:${blueCoronas[blueCorona].left}px; top:${blueCoronas[blueCorona].top}px;'></div>";
+}
+}
+
+function moveBlueCoronas() {
+for (var i = 0 ; i < blueCoronas.length; i++) {
+    blueCoronas[i].top = blueCoronas[i].top + 1;
 }
 }
 
@@ -87,7 +84,8 @@ function gameLoop() {
             setTimeout(gameLoop, 1000)
             moveRedLasers();
             drawRedLasers();
-            drawCorona();
+            drawBlueCoronas();
+            moveBlueCoronas();
 }
 
 gameLoop()
