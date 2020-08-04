@@ -1,8 +1,8 @@
-Corona Space Invaders Game
+Corona Invaders Game
 ---------------------------------------
 **Interactive-frontend-project - Marjolein van Leeuwen**
 
-This is my Interactive Front-end Development project. I created my own Corona Space Invaders game which is inspired by the original game of Space Invaders ,created by Tomohiro Nishikado in 1978. 
+This is my Interactive Front-end Development project. I created my own Corona Invaders game which is inspired by the original game of Space Invaders ,created by Tomohiro Nishikado in 1978. 
 
 Click here for my deployed project.
 
