@@ -11,7 +11,24 @@ var spaceShip = {
     left: 265
 };
 var redLasers = [];
-var blueCorona = [];
+var blueCoronas = [
+            { left: 200, top: 100 },
+            { left: 300, top: 100 },
+            { left: 400, top: 100 },
+            { left: 500, top: 100 },
+            { left: 600, top: 100 },
+            { left: 700, top: 100 },
+            { left: 800, top: 100 },
+            { left: 900, top: 100 },
+            { left: 200, top: 175 },
+            { left: 300, top: 175 },
+            { left: 400, top: 175 },
+            { left: 500, top: 175 },
+            { left: 600, top: 175 },
+            { left: 700, top: 175 },
+            { left: 800, top: 175 },
+            { left: 900, top: 175 }
+        ];
 
 
 document.onkeydown = function(e) {
@@ -58,10 +75,19 @@ function moveRedLasers() {
             }
         }
 
+function drawCorona() {
+    document.getElementById("blueCoronas").innerHTML=""
+    for (var blueCorona = 0; blueCorona < blueCoronas.length; blueCorona = blueCorona + 1){
+    document.getElementById("blueCoronas").innerHTML +=
+    "<div class='blueCorona' style='left:${blueCoronas[blueCorona].left}px; top:${blueCoronas[blueCorona].top}px;'></div>";
+}
+}
+
 function gameLoop() {
             setTimeout(gameLoop, 1000)
             moveRedLasers();
             drawRedLasers();
+            drawCorona();
 }
 
 gameLoop()
