@@ -1,3 +1,8 @@
+//Because my page scrolls down when I pressed the spacebar, I used this code to fix that. I found this code on https://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
+window.onkeydown = function(e) { 
+  return !(e.keyCode == 32);
+};
+
 
 //Javascript code to * reposition spaceship to the left and the right * Draw red Lasers
 
@@ -6,7 +11,7 @@ var spaceShip = {
     left: 265
 };
 var redLasers = [];
-var coronaInvaders = [];
+var blueCorona = [];
 
 
 document.onkeydown = function(e) {
@@ -40,7 +45,7 @@ function moveSpaceShip() {
 }
 
 function drawRedLasers() {
-    document.getElementById("redLasers").innerHTML= "";
+    document.getElementById("redLasers").innerHTML=""
     for (var redLaser = 0; redLaser < redLasers.length; redLaser = redLaser + 1){
     document.getElementById("redLasers").innerHTML +=
     "<div class='redLaser' style='left:${redLasers[redLaser].left}px; top:${redLasers[redLaser].top}px;'></div>";
@@ -60,10 +65,3 @@ function gameLoop() {
 }
 
 gameLoop()
-
-//Because my page scrolls down when I pressed the spacebar, I used this code to fix that. I found this code on https://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
-window.onkeydown = function(e) { 
-  return !(e.keyCode == 32);
-};
-
-
