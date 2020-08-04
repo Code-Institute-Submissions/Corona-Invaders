@@ -46,10 +46,13 @@ The challenge is to shoot all 8 Corona space microbes.
 
 I created a wireframe using the program “Mockflow”. 
 
+![Wireframe](/assets/Mockup%20wireframe.png)
+
 **Surface**
 
 * For the surface plane I wanted the design to set in space. 
 * My background design was inspired by the Galaxy.
+* I used space assets and corona cartoons in my game
 
 **Technologies**
 
@@ -83,6 +86,7 @@ I followed the next steps to deploy my game on the GitHub pages:
 **Credits**
 
 * Media: I downloaded space assets on the website [kenney.com][1] ( a free game assets website).
+* I downloaded free Corona virus microbes images from Pngtree.com
 
 **Acknowledgements**
 
