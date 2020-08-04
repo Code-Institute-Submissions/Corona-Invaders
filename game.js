@@ -4,8 +4,6 @@ window.onkeydown = function(e) {
 };
 
 
-//Javascript code to * reposition spaceship to the left and the right * Draw red Lasers
-
 var spaceship = {
     top: 500,
     left: 265
@@ -39,9 +37,9 @@ else if (e.keyCode == 39){
 
 else if (e.keyCode == 32){
     console.log("FIRE");
-    lasers.push ({
+    lasers.push({
         left: spaceship.left + 15,
-        top: spaceship.top
+        top: spaceship.top -15
     });
     drawLasers();
 }
@@ -50,6 +48,7 @@ moveSpaceship();
 
 function moveSpaceship() {
    document.getElementById("spaceship").style.left = spaceship.left + "px";
+   document.getElementById("spaceship").style.top + "px";
 }
 
 function drawLasers() {
@@ -80,12 +79,29 @@ for (var i = 0 ; i < coronas.length; i++) {
 }
 }
 
+function collisionDetection() {
+            for (var corona = 0; corona < coronas.length; corona++) {
+                for (var laser = 0; laser < lasers.length; laser++) {
+                    if ( 
+                        lasers[laser].left >= coronas[corona].left  &&
+                        lasers[laser].left <= (coronas[corona].left + 50)  &&
+                        lasers[laser].top <= (coronas[corona].top + 50)  &&
+                        lasers[laser].top >= coronas[corona].top
+                    ) {
+                        coronas.splice(corona, 1);
+                        laser.splice(laser, 1);
+                    }
+                }
+            }
+        }
+
 function gameLoop() {
             setTimeout(gameLoop, 1000);
             moveLasers();
             drawLasers();
             drawCoronas();
             moveCoronas();
+            collisionDetection();
 }
 
 gameLoop();
