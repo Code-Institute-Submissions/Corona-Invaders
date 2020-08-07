@@ -1,14 +1,27 @@
-img {
-    margin-top: 100px;
-    margin-left: 80px;
+a.button1 {
+ display:inline-block;
+ padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration: none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.2s;
 }
 
-.btn-light {
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
-    margin-top: 150px;
-    margin-left: 100px;
+a.button1:hover {
+ color:#000000;
+ background-color:#FFFFFF;
+}
+
+
+img {
+    margin-top: 50px;
+    margin-left: 90px;
 }
 
 
@@ -33,6 +46,14 @@ img {
     position: absolute;
     top: 700px;
 }
+
+
+
+h1 {
+    text-align: center;
+
+}
+
 
 .corona {
     background-image: url(assets/blue-Corona.png);
