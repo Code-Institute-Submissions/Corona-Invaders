@@ -101,4 +101,4 @@ I followed the next steps to deploy my game on the GitHub pages:
 ***I want to thank my mentor Brian Macharia for guiding me through the process of creating my own game inspired by Space Invaders.***
 
 
-[DEMO]: <sweetzia.github.io/corona-invaders/>
+[DEMO]: <https://sweetzia.github.io/Corona-Invaders/index.html>
