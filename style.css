@@ -1,6 +1,39 @@
 
-#background {
-    background-image: url("assets/background-galaxy-stars.jpg");
+
+.START-img {
+    max-width: 30%;
+    height: auto;
+    margin-top: 411px;
+    margin-left: 205px;
+}
+
+.EXIT-img {
+    max-width:20%;
+    height:auto;
+}
+
+.HOW-TO-PLAY-img {
+    max-width: 30%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+#background-galaxy-howtoplay {
+    background-image: url("assets/background-galaxy-howtoplay.png");
+    height: 600px;
+    width: 600px;
+}
+
+#background1 {
+    background-image: url("assets/Background1.png");
+    height: 600px;
+    width: 600px;
+}
+
+
+#background2 {
+    background-image: url("assets/background2.jpg");
     height: 600px;
     width: 600px;
 }
