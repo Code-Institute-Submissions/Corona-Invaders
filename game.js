@@ -60,12 +60,11 @@ function moveSpaceship() {
 }
 
 function drawLasers() {
-    document.getElementById("lasers").innerHTML = "";
-    for (var i = 0; i < lasers.length; i++) {
-        document.getElementById("lasers").innerHTML +=
-            "<div class='laser' style='left:${lasers[laser].left}px; top:${lasers[laser].top}px'></div>";
-    }
-}
+            document.getElementById('lasers').innerHTML = ""
+            for(var i = 0 ; i < lasers.length ; i++ ) {
+                document.getElementById('lasers').innerHTML += `<div class='laser' style='left:${lasers[i].left}px; top:${lasers[i].top}px'></div>`;
+            }
+        }
 
 function moveLasers() {
     for (var i = 0; i < lasers.length; i++) {
@@ -73,13 +72,12 @@ function moveLasers() {
     }
 }
 
-function drawCoronas() {
-    document.getElementById("coronas").innerHTML = "";
-    for (var i = 0; i < coronas.length; i++) {
-        document.getElementById("coronas").innerHTML +=
-            "<div class='corona' style='left:${coronas[corona].left}px; top:${coronas[corona].top}px'></div>";
-    }
-}
+ function drawCoronas() {
+            document.getElementById('coronas').innerHTML = ""
+            for(var i = 0 ; i < coronas.length ; i++ ) {
+                document.getElementById('coronas').innerHTML += `<div class='corona' style='left:${coronas[i].left}px; top:${coronas[i].top}px'></div>`;
+            }
+        }
 
 function moveCoronas() {
     for (var i = 0; i < coronas.length; i++) {
