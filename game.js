@@ -9,47 +9,20 @@ var spaceship = {
     left: 265
 };
 var lasers = [];
-var coronas = [{
-        left: 200,
-        bottom: 100
-    },
-    {
-        left: 300,
-        bottom: 100
-    },
-    {
-        left: 400,
-        bottom: 100
-    },
-    {
-        left: 500,
-        bottom: 100
-    },
-    {
-        left: 600,
-        bottom: 100
-    },
-    {
-        left: 200,
-        bottom: 175
-    },
-    {
-        left: 300,
-        bottom: 175
-    },
-    {
-        left: 400,
-        bottom: 175
-    },
-    {
-        left: 500,
-        bottom: 175
-    },
-    {
-        left: 600,
-        bottom: 175
-    },
-];
+var coronas =  [
+            { left: 200, top: 100 },
+            { left: 300, top: 100 },
+            { left: 400, top: 100 },
+            { left: 500, top: 100 },
+            { left: 600, top: 100 },
+            { left: 700, top: 100 },
+            { left: 200, top: 175 },
+            { left: 300, top: 175 },
+            { left: 400, top: 175 },
+            { left: 500, top: 175 },
+            { left: 600, top: 175 },
+            { left: 700, top: 175 }
+        ];
 
 
 document.onkeydown = function(e) {
