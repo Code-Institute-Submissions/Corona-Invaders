@@ -4,7 +4,7 @@ Corona Invaders Game
 
 This is my Interactive Front-end Development project. I created my own Corona Invaders game which is inspired by the original game of Space Invaders ,created by Tomohiro Nishikado in 1978. 
 
-Click here for my deployed project.
+Click [here][DEMO] for my deployed project.
 
 **User stories**
 
@@ -100,3 +100,5 @@ I followed the next steps to deploy my game on the GitHub pages:
 
 ***I want to thank my mentor Brian Macharia for guiding me through the process of creating my own game inspired by Space Invaders.***
 
+
+[DEMO]: <sweetzia.github.io/corona-invaders/>
