@@ -1,3 +1,17 @@
+img {
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+
 #background {
     background-image: url("assets/background-galaxy-stars.jpg");
     height: 600px;
