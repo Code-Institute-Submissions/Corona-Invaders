@@ -1,5 +1,12 @@
 
+h3 {
+    font-family: 'Oswald', sans-serif;
+    text-align: auto;
+}
+
+
 .grid{
+    background-image: url("assets/Black%20galaxy%20with%20stars%20%282%29.jpg");
     display: flex;
     flex-wrap: wrap;
     border: solid 1px;
@@ -9,22 +16,22 @@
 
 .grid div{
     width: 20px;
-    height:20px;
+    height:18px;
 }
 
 .spaceship {
-    background-color: blue;
+    background-image: url("assets/playerShip1_blue.png");
 }
 
 .invader {
-    background-color: purple;
+    background-image: url("assets/pink%20corona%20cartoon%20%282%29.png");
     border-radius:10px
 }
 
 .boom {
-    background-color: red;
+    background-color: pink;
 }
 
 .laser {
-    background-color: orange;
+    background-image: url("assets/laserGreen12%20%284%29.png");
 }

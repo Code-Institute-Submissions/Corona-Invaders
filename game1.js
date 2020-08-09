@@ -77,6 +77,14 @@ if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
     squares[currentSpaceShipIndex].classList.add('boom')
     clearInterval(invaderID)
 }
+// Code if you Win the Game
+
+if(coronaInvadersTakenDown.length === coronaInvaders.length) {
+      console.log(coronaInvadersTakenDown.length)
+      console.log(coronaInvaders.length)
+      resultDisplay.textContent = 'You Win'
+      clearInterval(invaderId)
+    }
 
 // if any of the corona aliens miss the spaceship , but reach end of the grid, the game is also over
 
