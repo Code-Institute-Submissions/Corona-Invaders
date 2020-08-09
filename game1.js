@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
-    const resyltDisplay = document.querySelector('#result')
+    const resultDisplay = document.querySelector('#result')
     let width = 15;
     let currentSpaceShipIndex = 194
     let currentInvaderIndex = 0
@@ -47,24 +47,48 @@ document.addEventListener('keydown', moveSpaceShip)
 
 // Move the corona aliens and put them in a time loop
 
-const moveInvaders () {
-    const letfEdge coronaInvaders[0] % width === 0
-    const rightEdge coronaInvaders[coronaInvaders.length -1] % width === width -1
+function moveCoronaInvaders() {
+    const letfEdge = coronaInvaders[0] % width === 0
+    const rightEdge = coronaInvaders[coronaInvaders.length -1] % width === width -1
 
-    if ((leftEdge && direction === -1)) || ((rightEdge && direction === -1)){
+    if((leftEdge && direction === -1) || (rightEdge && direction === 1)){
         direction = width
     } else if (direction === width){
-        if (leftEdge) direction = -1
+        if (leftEdge) direction = 1
         else direction = -1
     }
-for (let i = 0; i <= coronaInvaders.length -1; i++){
+for (let i = 0; i <= coronaInvaders.length -1; i++) {
     squares[coronaInvaders[i]].classList.remove('invader')
 }
-for (let i = 0; i <= coronaInvaders.length -1; i++){
+for (let i = 0; i <= coronaInvaders.length -1; i++) {
     coronaInvader[i] += direction
 }
-for (let i = 0; i <= coronaInvaders.length -1; i++){
+for (let i = 0; i <= coronaInvaders.length -1; i++) {
     squares[coronaInvaders[i]].classList.add('invader')
+}
+
+// Code for Game Over
+// If the corona alien comes to the spaceship the game is over
+
+if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
+    resultDisplay.textContent = 'Game Over'
+    squares[currentSpaceShipIndex].classList.add('boom')
+    clearInterval(invaderID)
+}
+
+// if any of the corona aliens miss the spaceship , but reach end of the grid, the game is also over
+
+for (let i = 0; i <= coronaInvaders.length -1; i++) {
+    if(coronaInvaders[i] > (squares.length - (width-1))) {
+        resultDisplay.textContent = 'Game Over'
+        clearInterval (invaderID)
+    }
+}
+}
+
+// Code 
+
+invaderID = setInterval(moveCoronaInvaders, 500)
+
 
 })
-
