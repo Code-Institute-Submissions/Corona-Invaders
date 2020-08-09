@@ -3,8 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     border: solid 1px;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 }
 
 .grid div{
