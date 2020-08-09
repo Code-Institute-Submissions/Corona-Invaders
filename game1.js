@@ -88,9 +88,52 @@ for (let i = 0; i <= coronaInvaders.length -1; i++) {
 }
 }
 
-// Code 
-
 invaderID = setInterval(moveCoronaInvaders, 500)
 
+
+// Code for shooting at the corona Invaders with lasers
+
+function shoot(e) {
+    let laserId
+    let currentLaserIndex = currentSpaceShipIndex
+
+    //move the laser from the shooter to the corona invader
+
+    function moveLaser() {
+      squares[currentLaserIndex].classList.remove('laser')
+      currentLaserIndex -= width
+      squares[currentLaserIndex].classList.add('laser')
+      if(squares[currentLaserIndex].classList.contains('invader')) {
+        squares[currentLaserIndex].classList.remove('laser')
+        squares[currentLaserIndex].classList.remove('invader')
+        squares[currentLaserIndex].classList.add('boom')
+
+// Let the boom appear for a short time
+
+        setTimeout(() => squares[currentLaserIndex].classList.remove('boom'), 250)
+        clearInterval(laserId)
+
+        const coronaTakenDown = coronaInvaders.indexOf(currentLaserIndex)
+        coronaInvadersTakenDown.push(coronaTakenDown)
+        result++
+        resultDisplay.textContent = result
+      }
+
+      if(currentLaserIndex < width) {
+        clearInterval(laserId)
+        setTimeout(() => squares[currentLaserIndex].classList.remove('laser'), 100)
+      }
+    }
+
+// I want the laser to be shooted with the spacebar key on my keyboard
+
+switch(e.keyCode) {
+      case 32:
+        laserId = setInterval(moveLaser, 100)
+        break
+    }
+  }
+
+  document.addEventListener('keyup', shoot)
 
 })
