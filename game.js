@@ -1,6 +1,4 @@
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
     const resultDisplay = document.querySelector('#result')
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let result = 0
     let direction = 1
     let invaderId
-    var music;
 
     
 //define the corona alien invaders how to appear in my squares array, set their position
