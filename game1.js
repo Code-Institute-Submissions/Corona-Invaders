@@ -77,6 +77,16 @@ if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
     squares[currentSpaceShipIndex].classList.add('boom')
     clearInterval(invaderID)
 }
+
+
+// if any of the corona aliens miss the spaceship , but reach end of the grid, the game is also over
+
+for (let i = 0; i <= coronaInvaders.length -1; i++) {
+    if(coronaInvaders[i] > (squares.length - (width-1))) {
+        resultDisplay.textContent = 'Game Over'
+        clearInterval (invaderID)
+    }
+
 // Code if you Win the Game
 
 if(coronaInvadersTakenDown.length === coronaInvaders.length) {
@@ -86,13 +96,6 @@ if(coronaInvadersTakenDown.length === coronaInvaders.length) {
       clearInterval(invaderId)
     }
 
-// if any of the corona aliens miss the spaceship , but reach end of the grid, the game is also over
-
-for (let i = 0; i <= coronaInvaders.length -1; i++) {
-    if(coronaInvaders[i] > (squares.length - (width-1))) {
-        resultDisplay.textContent = 'Game Over'
-        clearInterval (invaderID)
-    }
 }
 }
 
