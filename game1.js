@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
     const resultDisplay = document.querySelector('#result')
@@ -8,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let result = 0
     let direction = 1
     let invaderId
-
 
 //define the corona alien invaders how to appear in my squares array, set their position
 
@@ -67,6 +68,7 @@ function moveCoronaInvaders() {
         if (!coronaInvadersTakenDown.includes(i)){
             squares[coronaInvaders[i]].classList.add('invader')
         }
+        
 }
 
 // Code for Game Over
@@ -107,6 +109,7 @@ invaderID = setInterval(moveCoronaInvaders, 500)
 function shoot(e) {
     let laserId
     let currentLaserIndex = currentSpaceShipIndex
+    
 
     //move the laser from the shooter to the corona invader
 
@@ -118,8 +121,11 @@ function shoot(e) {
         squares[currentLaserIndex].classList.remove('laser')
         squares[currentLaserIndex].classList.remove('invader')
         squares[currentLaserIndex].classList.add('boom')
+        
+        
 
 // Let the boom appear for a short time
+
 
         setTimeout(() => squares[currentLaserIndex].classList.remove('boom'), 250)
         clearInterval(laserId)
@@ -128,6 +134,7 @@ function shoot(e) {
         coronaInvadersTakenDown.push(coronaTakenDown)
         result++
         resultDisplay.textContent = result
+        
       }
 
       if(currentLaserIndex < width) {
@@ -147,4 +154,6 @@ switch(e.keyCode) {
 
   document.addEventListener('keyup', shoot)
 
+
 })
+
