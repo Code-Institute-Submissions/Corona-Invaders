@@ -1,4 +1,6 @@
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
     const resultDisplay = document.querySelector('#result')
@@ -9,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let result = 0
     let direction = 1
     let invaderId
+    var music;
 
+    
 //define the corona alien invaders how to appear in my squares array, set their position
 
 const coronaInvaders = [
@@ -25,6 +29,7 @@ coronaInvaders.forEach( invader => squares[currentInvaderIndex + invader].classL
 // Draw the spaceship
 
 squares[currentSpaceShipIndex].classList.add('spaceship')
+
 
 //Move the spaceship from left to right
 
@@ -45,6 +50,8 @@ function moveSpaceShip(e) {
 }
 document.addEventListener('keydown', moveSpaceShip)
 
+
+
 // Move the corona aliens and put them in a time loop
 
 function moveCoronaInvaders() {	
@@ -55,20 +62,25 @@ function moveCoronaInvaders() {
 	direction = width
 	} else if (direction === width) {
 	if (leftEdge) direction = 1
-	else direction = -1
+    else direction = -1
+    gameMusic.play();
 	}
 	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
-	squares[coronaInvaders[i]].classList.remove('invader')
+    squares[coronaInvaders[i]].classList.remove('invader')
+    gameMusic.play();
 	}
 	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
-	coronaInvaders[i] += direction
+    coronaInvaders[i] += direction
+    gameMusic.play();
 	}
 	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
         if (!coronaInvadersTakenDown.includes(i)){
             squares[coronaInvaders[i]].classList.add('invader')
+            gameMusic.play();
         }
         
 }
+
 
 // Code for Game Over
 // If the corona alien comes to the spaceship the game is over
@@ -77,6 +89,7 @@ if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
     resultDisplay.textContent = 'Game Over'
     squares[currentSpaceShipIndex].classList.add('boom')
     clearInterval(invaderID)
+    gameOver.play();
 }
 
 
@@ -86,6 +99,7 @@ for (let i = 0; i <= coronaInvaders.length -1; i++) {
     if(coronaInvaders[i] > (squares.length - (width-1))) {
         resultDisplay.textContent = 'Game Over'
         clearInterval (invaderID)
+         gameOver.play();
     }
 
 // Code if you Win the Game
@@ -95,6 +109,7 @@ if(coronaInvadersTakenDown.length === coronaInvaders.length) {
       console.log(coronaInvaders.length)
       resultDisplay.textContent = 'You Win'
       clearInterval(invaderId)
+      youWin.play();
     }
 
 }
@@ -133,7 +148,7 @@ function shoot(e) {
         coronaInvadersTakenDown.push(coronaTakenDown)
         result++
         resultDisplay.textContent = result
-        
+        boom.play();
       }
 
       if(currentLaserIndex < width) {
@@ -156,3 +171,15 @@ switch(e.keyCode) {
 
 })
 
+// load audio files
+
+
+const gameMusic = new Audio();
+const youWin = new Audio();
+const gameOver = new Audio();
+const boom = new Audio();
+
+gameMusic.src = "/audio/GameMusic.mp3"
+youWin.src = "/audio/cheering.mp3"
+gameOver.src = "/audio/GameOver.wav"
+boom.src = "/audio/boom.wav"
