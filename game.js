@@ -63,7 +63,6 @@ function moveCoronaInvaders() {
 	} else if (direction === width) {
 	if (leftEdge) direction = 1
     else direction = -1
-
     // you hear exciting space music when you play the game
     gameMusic.play();
 	}
@@ -85,14 +84,15 @@ function moveCoronaInvaders() {
 
 
 // Code for Game Over
-// If the corona alien comes to the spaceship the game is over
+// If the corona alien comes in contact with the spaceship the game is over
 
 if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
     resultDisplay.textContent = 'Game Over'
-    squares[currentSpaceShipIndex].classList.add('boom')
+    squares[currentSpaceShipIndex].classList.add('explosion')
     clearInterval(invaderID)
     // when you lose you hear an explosion sound
     gameOver.play();
+    gameMusic.pause();
 }
 
 
@@ -104,6 +104,7 @@ for (let i = 0; i <= coronaInvaders.length -1; i++) {
         clearInterval (invaderID)
         // when you lose you hear an explosion sound
          gameOver.play();
+         gameMusic.pause();
     }
 
 // Code if you Win the Game
