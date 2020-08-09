@@ -47,24 +47,26 @@ document.addEventListener('keydown', moveSpaceShip)
 
 // Move the corona aliens and put them in a time loop
 
-function moveCoronaInvaders() {
-    const letfEdge = coronaInvaders[0] % width === 0
-    const rightEdge = coronaInvaders[coronaInvaders.length -1] % width === width -1
-
-    if((leftEdge && direction === -1) || (rightEdge && direction === 1)){
-        direction = width
-    } else if (direction === width){
-        if (leftEdge) direction = 1
-        else direction = -1
-    }
-for (let i = 0; i <= coronaInvaders.length -1; i++) {
-    squares[coronaInvaders[i]].classList.remove('invader')
-}
-for (let i = 0; i <= coronaInvaders.length -1; i++) {
-    coronaInvader[i] += direction
-}
-for (let i = 0; i <= coronaInvaders.length -1; i++) {
-    squares[coronaInvaders[i]].classList.add('invader')
+function moveCoronaInvaders() {	
+	const leftEdge = coronaInvaders[0] % width === 0
+	const rightEdge = coronaInvaders[coronaInvaders.length - 1] % width === width - 1
+	
+	if((leftEdge && direction === -1) || (rightEdge && direction === 1)){
+	direction = width
+	} else if (direction === width) {
+	if (leftEdge) direction = 1
+	else direction = -1
+	}
+	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
+	squares[coronaInvaders[i]].classList.remove('invader')
+	}
+	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
+	coronaInvaders[i] += direction
+	}
+	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
+        if (!coronaInvadersTakenDown.includes(i)){
+            squares[coronaInvaders[i]].classList.add('invader')
+        }
 }
 
 // Code for Game Over
