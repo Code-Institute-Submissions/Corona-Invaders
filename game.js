@@ -1,128 +1,158 @@
-/*
-Comment your code
 
-Notice the comment above the function specifically describes:
-1. What it does,
-2. What the arguments are, if any (both a description and datatype)
-3a. What the function returns, if anything (both a description and datatype),
-3b. Any exceptions/errors thrown by the function
-*/
+document.addEventListener('DOMContentLoaded', () => {
+    const squares = document.querySelectorAll('.grid div')
+    const resultDisplay = document.querySelector('#result')
+    let width = 15;
+    let currentSpaceShipIndex = 194
+    let currentInvaderIndex = 0
+    let coronaInvadersTakenDown = []
+    let result = 0
+    let direction = 1
+    let invaderId
 
+//define the corona alien invaders how to appear in my squares array, set their position
 
-//Because my page scrolls down when I pressed the spacebar, I used this code to fix that. I found this code on https://stackoverflow.com/questions/22559830/html-prevent-space-bar-from-scrolling-page
-window.onkeydown = function(e) {
-    return !(e.keyCode == 32);
-};
+const coronaInvaders = [
+    0,1,2,3,4,5,6,7,8,9,
+    15,16,17,18,19,20,21,22,23,24,
+    30,31,32,33,34,35,36,37,38,39
+]
 
-/* I learned from my mentor Brian today I could better use let instead of var.
-var uses something called ‘hoisting’, which can lead to unexpected results.
-let and const are both block-scoped. Which means you can declare them in for loop or if statement, and they will only be valid for that block. 
-This helps with spotting bugs and makes your code more robust.*/
+// Draw the corona alien inavers
 
-let spaceship = {
-    top: 500,
-    left: 265
-};
-let lasers = [];
-let coronas =  [
-            { left: 200, top: 100 },
-            { left: 300, top: 100 },
-            { left: 400, top: 100 },
-            { left: 500, top: 100 },
-            { left: 600, top: 100 },
-            { left: 700, top: 100 },
-            { left: 200, top: 175 },
-            { left: 300, top: 175 },
-            { left: 400, top: 175 },
-            { left: 500, top: 175 },
-            { left: 600, top: 175 },
-            { left: 700, top: 175 }
-        ];
+coronaInvaders.forEach( invader => squares[currentInvaderIndex + invader].classList.add('invader'))
 
+// Draw the spaceship
 
-document.onkeydown = function(e) {
-    console.log(e.keyCode);
+squares[currentSpaceShipIndex].classList.add('spaceship')
 
-    //move spaceship to the left
-    if (e.keyCode == 37) {
-        console.log("LEFT");
-        spaceship.left = spaceship.left - 15;
-        moveSpaceship();
+//Move the spaceship from left to right
+
+function moveSpaceShip(e) {
+    squares[currentSpaceShipIndex].classList.remove('spaceship')
+    switch(e.keyCode) {
+
+    // left arrow on my keyboard
+        case 37:
+            if(currentSpaceShipIndex % width !== 0) currentSpaceShipIndex -=1
+            break
+    // right arrow on my keyboard
+        case 39:
+            if(currentSpaceShipIndex % width < width -1) currentSpaceShipIndex +=1
+            break
     }
-
-    //move spaceship to the right
-    else if (e.keyCode == 39) {
-        console.log("RIGHT");
-        spaceship.left = spaceship.left + 15;
-        moveSpaceship();
-    }
-
-    // Fire lasers
-    else if (e.keyCode == 32) {
-        console.log("FIRE");
-        lasers.push({
-            left: spaceship.left + 15,
-            top: spaceship.top - 15
-        });
-        drawLasers();
-    }
-    moveSpaceship();
-};
-
-function moveSpaceship() {
-    document.getElementById("spaceship").style.left = spaceship.left + "px";
-    document.getElementById("spaceship").style.top + "px";
+    squares[currentSpaceShipIndex].classList.add('spaceship')
 }
+document.addEventListener('keydown', moveSpaceShip)
 
-function drawLasers() {
-            document.getElementById('lasers').innerHTML = ""
-            for(var i = 0 ; i < lasers.length ; i++ ) {
-                document.getElementById('lasers').innerHTML += `<div class='laser' style='left:${lasers[i].left}px; top:${lasers[i].top}px'></div>`;
-            }
+// Move the corona aliens and put them in a time loop
+
+function moveCoronaInvaders() {	
+	const leftEdge = coronaInvaders[0] % width === 0
+	const rightEdge = coronaInvaders[coronaInvaders.length - 1] % width === width - 1
+	
+	if((leftEdge && direction === -1) || (rightEdge && direction === 1)){
+	direction = width
+	} else if (direction === width) {
+	if (leftEdge) direction = 1
+	else direction = -1
+	}
+	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
+	squares[coronaInvaders[i]].classList.remove('invader')
+	}
+	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
+	coronaInvaders[i] += direction
+	}
+	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
+        if (!coronaInvadersTakenDown.includes(i)){
+            squares[coronaInvaders[i]].classList.add('invader')
         }
+        
+}
 
-function moveLasers() {
-    for (var i = 0; i < lasers.length; i++) {
-        lasers[i].top = lasers[i].top - 8;
+// Code for Game Over
+// If the corona alien comes to the spaceship the game is over
+
+if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
+    resultDisplay.textContent = 'Game Over'
+    squares[currentSpaceShipIndex].classList.add('boom')
+    clearInterval(invaderID)
+}
+
+
+// if any of the corona aliens miss the spaceship , but reach end of the grid, the game is also over
+
+for (let i = 0; i <= coronaInvaders.length -1; i++) {
+    if(coronaInvaders[i] > (squares.length - (width-1))) {
+        resultDisplay.textContent = 'Game Over'
+        clearInterval (invaderID)
     }
-}
 
- function drawCoronas() {
-            document.getElementById('coronas').innerHTML = ""
-            for(var i = 0 ; i < coronas.length ; i++ ) {
-                document.getElementById('coronas').innerHTML += `<div class='corona' style='left:${coronas[i].left}px; top:${coronas[i].top}px'></div>`;
-            }
-        }
+// Code if you Win the Game
 
-function moveCoronas() {
-    for (var i = 0; i < coronas.length; i++) {
-        coronas[i].top = coronas[i].top + 1;
+if(coronaInvadersTakenDown.length === coronaInvaders.length) {
+      console.log(coronaInvadersTakenDown.length)
+      console.log(coronaInvaders.length)
+      resultDisplay.textContent = 'You Win'
+      clearInterval(invaderId)
     }
+
+}
 }
 
-function collisionDetection() {
-    for (var corona = 0; corona < coronas.length; corona++) {
-        for (var laser = 0; laser < lasers.length; laser++) {
-            if (
-                lasers[laser].left >= coronas[corona].left &&
-                lasers[laser].left <= (coronas[corona].left + 50) &&
-                lasers[laser].top <= (coronas[corona].top + 50) &&
-                lasers[laser].top >= coronas[corona].top
-            ) {
-                coronas.splice(corona, 1);
-                laser.splice(laser, 1);
-            }
-        }
+invaderID = setInterval(moveCoronaInvaders, 500)
+
+
+// Code for shooting at the corona Invaders with lasers
+
+function shoot(e) {
+    let laserId
+    let currentLaserIndex = currentSpaceShipIndex
+    
+
+    //move the laser from the shooter to the corona invader
+
+    function moveLaser() {
+      squares[currentLaserIndex].classList.remove('laser')
+      currentLaserIndex -= width
+      squares[currentLaserIndex].classList.add('laser')
+      if(squares[currentLaserIndex].classList.contains('invader')) {
+        squares[currentLaserIndex].classList.remove('laser')
+        squares[currentLaserIndex].classList.remove('invader')
+        squares[currentLaserIndex].classList.add('boom')
+        
+        
+
+// Let the boom appear for a short time
+
+
+        setTimeout(() => squares[currentLaserIndex].classList.remove('boom'), 250)
+        clearInterval(laserId)
+
+        const coronaTakenDown = coronaInvaders.indexOf(currentLaserIndex)
+        coronaInvadersTakenDown.push(coronaTakenDown)
+        result++
+        resultDisplay.textContent = result
+        
+      }
+
+      if(currentLaserIndex < width) {
+        clearInterval(laserId)
+        setTimeout(() => squares[currentLaserIndex].classList.remove('laser'), 100)
+      }
     }
-}
 
-function gameLoop() {
-    setTimeout(gameLoop, 1000);
-    moveLasers();
-    drawLasers();
-    drawCoronas();
-    moveCoronas();
-    collisionDetection();
-}
+// I want the laser to be shooted with the spacebar key on my keyboard
 
-gameLoop();
+switch(e.keyCode) {
+      case 32:
+        laserId = setInterval(moveLaser, 100)
+        break
+    }
+  }
+
+  document.addEventListener('keyup', shoot)
+
+
+})
+

@@ -1,90 +1,36 @@
-
-
-.START-img {
-    max-width: 30%;
-    height: auto;
-    margin-top: 411px;
-    margin-left: 205px;
-}
-
-.EXIT-img {
-    max-width:20%;
-    height:auto;
-}
-
-.HOW-TO-PLAY-img {
-    max-width: 30%;
-    height: auto;
-    margin-top: 10px;
-    margin-left: 200px;
-}
-
-#background-galaxy-howtoplay {
-    background-image: url("assets/background-galaxy-howtoplay.png");
-    height: 600px;
-    width: 600px;
-}
-
-#background1 {
-    background-image: url("assets/Background1.png");
-    height: 600px;
-    width: 600px;
+h3 {
+    font-family: 'Oswald', sans-serif;
+    text-align: auto;
 }
 
 
-#background2 {
-    background-image: url("assets/background2.jpg");
-    height: 600px;
-    width: 600px;
+.grid{
+    background-image: url("assets/Black%20galaxy%20with%20stars%20%282%29.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px;
+    width: 300px;
+    height: 300px;
 }
 
-#spaceship {
-    background-image: url("assets/spaceship.png");
-    height: 78px;
-    width: 99px;
-    position: absolute;
-    top: 500px;
-    left: 265px;
+.grid div{
+    width: 20px;
+    height:18px;
 }
 
-#coronas {
-    height: 42px;
-    width: 41px;
-    position: absolute;
-    bottom: 700px;
+.spaceship {
+    background-image: url("assets/playerShip1_blue.png");
 }
 
-
-
-h1 {
-    text-align: center;
-
+.invader {
+    background-image: url("assets/pink%20corona%20cartoon%20%282%29.png");
+    border-radius:10px
 }
 
-
-.corona {
-    background-image: url(assets/blue-Corona.png);
-    height: 42px;
-    width: 41px;
-    position: absolute;
-    bottom: 600px;
-    left: 300px;
-}
-
-#lasers {
-    height: 600px;
-    width: 600px;
-    position: absolute;
+.boom {
+    background-color: pink;
 }
 
 .laser {
-    background-image: url(assets/red-Laser.png);
-    height: 57px;
-    width: 9px;
-    position: absolute;
-    bottom: 730px;
-    left: 300px;
+    background-image: url("assets/laserGreen12%20%284%29.png");
 }
-
-
-
