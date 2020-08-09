@@ -63,6 +63,8 @@ function moveCoronaInvaders() {
 	} else if (direction === width) {
 	if (leftEdge) direction = 1
     else direction = -1
+
+    // you hear exciting space music when you play the game
     gameMusic.play();
 	}
 	for (let i = 0; i <= coronaInvaders.length - 1; i++) {
@@ -89,6 +91,7 @@ if(squares[currentSpaceShipIndex].classList.contains('invader', 'spaceship')) {
     resultDisplay.textContent = 'Game Over'
     squares[currentSpaceShipIndex].classList.add('boom')
     clearInterval(invaderID)
+    // when you lose you hear an explosion sound
     gameOver.play();
 }
 
@@ -99,6 +102,7 @@ for (let i = 0; i <= coronaInvaders.length -1; i++) {
     if(coronaInvaders[i] > (squares.length - (width-1))) {
         resultDisplay.textContent = 'Game Over'
         clearInterval (invaderID)
+        // when you lose you hear an explosion sound
          gameOver.play();
     }
 
@@ -109,6 +113,7 @@ if(coronaInvadersTakenDown.length === coronaInvaders.length) {
       console.log(coronaInvaders.length)
       resultDisplay.textContent = 'You Win'
       clearInterval(invaderId)
+      // when you win you hear kids cheering
       youWin.play();
     }
 
