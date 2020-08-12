@@ -1,9 +1,10 @@
 h3 {
     font-family: 'Oswald', sans-serif;
-    text-align: auto;
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 2px;
     color: white;
 }
-
 
 .grid{
     background-image: url("assets/Black%20galaxy%20with%20stars%20%282%29.jpg");
