@@ -67,24 +67,28 @@ I created a wireframe using the program “Mockflow”. 
 The game menu reveals itself with two colourful menu buttons. When the user selects the "start Corona Invaders" and "how to play" button you notice a hover glow effect. 
 When you get redirected to the Corona Invaders game page & how to play page, you can leave this page by pressing the EXIT button.
 The hover glow effect buttons were styled with the css code. 
+
 * Display score and result
+
 * Audio and music from the website [classing gaming][a]
-1. Exciting Space Invaders music in the background when you play the game. 
-2. Space Invaders sounds when you succesfully [hit the Corona Invaders][b] with your laser, when [YOU WIN][c] the game and when its [GAME OVER][d]. 
+Exciting Space Invaders music in the background when you play the game. 
+Space Invaders sounds when you succesfully [hit the Corona Invaders][b] with your laser, when [YOU WIN][c] the game and when its [GAME OVER][d]. 
 
 **Testing**
 
 All testing carried out was done manually.
 Testing problems I encountered:
-* My corona Invaders did not move and I could not shoot my lasers to them with my spaceship. E
-ventually after feedback from my mentor I decided to start over with my Corona Invaders code. 
+
+* My corona Invaders did not move and I could not shoot my lasers with my spaceship. 
+After feedback from my mentor I decided to start over with my Corona Invaders code. 
+
 I watched a different tutorial from Ania Kubow , which made me understand the JS code more on how to make a grid for the game and for example how const,functions, if/else statements and keyCodes worked in your code. 
 So I learned a lot from her. 
 * Audio that I added in my game.js file did not work.
 
 **Features Left to Implement**
 
-* Implement mobile controls in an HTML5 game, and enjoy playing on a mobile touch-enabled device.
+* Implement mobile controls in an HTML5 game, and playing on a mobile touch-enabled device.
 * Adding more difficulty levels and different coloured Corona Ivaders to defeat with your spaceship.
 
 **Deployment**
