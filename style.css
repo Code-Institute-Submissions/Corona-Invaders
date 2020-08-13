@@ -9,7 +9,7 @@ h3 {
 }
 
 .grid{
-    background-image: url("assets/Black%20galaxy%20with%20stars%20%282%29.jpg");
+    background-image: url("images/Black%20galaxy%20with%20stars%20%282%29.jpg");
     display: flex;
     flex-wrap: wrap;
     border: solid 1px;
@@ -23,11 +23,11 @@ h3 {
 }
 
 .spaceship {
-    background-image: url("assets/playerShip1_blue.png");
+    background-image: url("images/playerShip1_blue.png");
 }
 
 .invader {
-    background-image: url("assets/pink%20corona%20cartoon%20%282%29.png");
+    background-image: url("images/pink%20corona%20cartoon%20%282%29.png");
     border-radius:10px
 }
 
@@ -36,7 +36,7 @@ h3 {
 }
 
 .laser {
-    background-image: url("assets/laserGreen12%20%284%29.png");
+    background-image: url("images/laserGreen12%20%284%29.png");
 }
 
 
