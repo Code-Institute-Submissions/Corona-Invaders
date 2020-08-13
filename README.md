@@ -6,7 +6,7 @@ This is my Interactive Front-end Development project. I created my own Corona In
 
 Click [here][DEMO] for my deployed project.
 
-![SPACE INVADERS demo](/assets/images/game.gif)
+![SPACE INVADERS demo](/images/game.gif)
 
 **User stories**
 
