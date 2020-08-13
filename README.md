@@ -28,6 +28,7 @@ The page will be simplistic and easy to navigate around. Its purpose is to make 
 This page is to provide users with quick access to the Corona Invaders game. The Game is to challenge the users to defeat the Corona Invaders.
 
 **How to play**
+
 Press the Start game button and the game container will appear. 
 Wait for the game to begin. The user can see the Corona Invaders move from left to right.
 The challenge is to shoot all Corona Invaders.
@@ -64,13 +65,15 @@ I created a wireframe using the program “Mockflow”. 
 **Features**
 
 * Game Menu buttons
+
 The game menu reveals itself with two colourful menu buttons. When the user selects the "start Corona Invaders" and "how to play" button you notice a hover glow effect. 
 When you get redirected to the Corona Invaders game page & how to play page, you can leave this page by pressing the EXIT button.
 The hover glow effect buttons were styled with the css code. 
 
-* Display score and result
+* Counting the score and see the result when you win or lose.
 
 * Audio and music from the website [classing gaming][a]
+
 Exciting Space Invaders music in the background when you play the game. 
 Space Invaders sounds when you succesfully [hit the Corona Invaders][b] with your laser, when [YOU WIN][c] the game and when its [GAME OVER][d]. 
 
@@ -84,11 +87,11 @@ After feedback from my mentor I decided to start over with my Corona Invaders co
 
 I watched a different tutorial from Ania Kubow , which made me understand the JS code more on how to make a grid for the game and for example how const,functions, if/else statements and keyCodes worked in your code. 
 So I learned a lot from her. 
-* Audio that I added in my game.js file did not work.
+* Audio that I added in my game.js file did not work. I discovered that I had to remove the forward slash in my code, so I could properly load my audio.
 
 **Features Left to Implement**
 
-* Implement mobile controls in an HTML5 game, and playing on a mobile touch-enabled device.
+* Implement mobile controls in my game, so you can play Corona Invaders on a mobile touch-enabled device.
 * Adding more difficulty levels and different coloured Corona Ivaders to defeat with your spaceship.
 
 **Deployment**
@@ -108,7 +111,7 @@ I followed the next steps to deploy my game on the GitHub pages:
 **Credits**
 
 * Media: I downloaded space assets on the website [kenney.com][1] ( a free game assets website).
-* I downloaded free Corona virus microbes images from [Pngtree.com][2]
+* I downloaded Corona virus microbes images from [Pngtree.com][2]
 
 **Acknowledgements**
 
