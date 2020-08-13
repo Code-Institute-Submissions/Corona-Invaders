@@ -139,3 +139,4 @@ I followed the next steps to deploy my game on the GitHub pages:
 [5]: <https://www.youtube.com/watch?v=XmqAPQsc1n4&t=3465s>
 [6]: <https://www.youtube.com/watch?v=kSt2_YZzCec>
 [7]: <https://codepen.io/kocsten/pen/rggjXp>
+[8]: <https://www.youtube.com/watch?v=9TcU2C1AACw>
