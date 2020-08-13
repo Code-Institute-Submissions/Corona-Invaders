@@ -182,7 +182,7 @@ const youWin = new Audio();
 const gameOver = new Audio();
 const boom = new Audio();
 
-gameMusic.src = "/audio/GameMusic.mp3"
-youWin.src = "/audio/cheering.mp3"
-gameOver.src = "/audio/GameOver.wav"
-boom.src = "/audio/boom.wav"
+gameMusic.src = "audio/GameMusic.mp3"
+youWin.src = "audio/cheering.mp3"
+gameOver.src = "audio/GameOver.wav"
+boom.src = "audio/boom.wav"
