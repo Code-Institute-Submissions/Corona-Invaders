@@ -48,7 +48,7 @@ The challenge is to shoot all Corona Invaders.
 
 I created a wireframe using the program “Mockflow”. 
 
-![Wireframe](/assets/Mockup%20wireframe.png)
+![Wireframe](/images/Mockup%20wireframe.png)
 
 **Surface**
 
