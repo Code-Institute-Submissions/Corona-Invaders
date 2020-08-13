@@ -6,6 +6,8 @@ This is my Interactive Front-end Development project. I created my own Corona In
 
 Click [here][DEMO] for my deployed project.
 
+![SPACE INVADERS demo](/assets/images/game.gif)
+
 **User stories**
 
 * As a user : As a new visitor to the game I want the page to be easily navigated.
