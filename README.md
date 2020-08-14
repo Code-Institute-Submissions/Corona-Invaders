@@ -71,7 +71,7 @@ I created a wireframe using the program “Mockflow”. 
 When you get redirected to the Corona Invaders game page & how to play page, you can leave this page by pressing the EXIT button.
 The hover glow effect buttons were styled with the css code. 
 
-* Scoreboard and result
+* Scoreboard and result at the top of the game page
 
 * Audio and music from the website: [classing gaming.][a] You hear exciting Space Invaders music in the background when you play the game and Space Invaders sounds when you succesfully [hit the Corona Invaders][b] with your laser, when [YOU WIN][c] the game and when its [GAME OVER][d]. 
 
@@ -84,7 +84,10 @@ Testing problems I encountered:
 After feedback from my mentor I decided to start over with my Corona Invaders code, because I did not really understood some of the code from [Coding Dojo][5]. 
 I watched a different tutorial from developer [Ania Kubów][0], which made me understand the JS code more on how to make a grid for the game and for example how const,functions, if/else statements and keyCodes worked in your code. 
 
-* Audio that I added in my game.js file did not work. I discovered that I had to remove the forward slash in my code, so I could properly load my audio.
+* I could not succeed in adding audio to my game. Until I learned how to add and load audio in your JS file through the youtube tutorial from [code explained][8]. 
+
+* In my JS code on line 32 I encountered a problem: .............................
+I don't know what this means
 
 **Features Left to Implement**
 
