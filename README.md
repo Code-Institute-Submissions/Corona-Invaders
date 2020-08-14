@@ -2,11 +2,12 @@ Corona Invaders Game
 ---------------------------------------
 **Interactive-frontend-project - Marjolein van Leeuwen**
 
-This is my Interactive Front-end Development project. I created my own Corona Invaders game which is inspired by the original game of Space Invaders ,created by Tomohiro Nishikado in 1978. 
+This is my Interactive Front-end Development project. I created my own Corona Invaders game which is based on the original game of Space Invaders ,created by Tomohiro Nishikado in 1978. 
+And I got inspired bij the [#JavaScriptGames][0] from developer Ania Kubów. 
 
 Click [here][DEMO] for my deployed project.
 
-![SPACE INVADERS demo](/images/game.gif)
+![SPACE INVADERS demo](assets/images/game.gif)
 
 **User stories**
 
@@ -16,7 +17,7 @@ Click [here][DEMO] for my deployed project.
 * As a User: I want a game that is fun and exciting to play
 
 The ideal user:
-* Age 4+
+* Age 6+
 * Children and adults
 
 
@@ -31,9 +32,9 @@ This page is to provide users with quick access to the Corona Invaders game. The
 
 **How to play**
 
-Press the Start game button and the game container will appear. 
-Wait for the game to begin. The user can see the Corona Invaders move from left to right.
-The challenge is to shoot all Corona Invaders.
+Press the "Play Corona Invaders" button and the game container will appear. 
+Wait for the game to begin. The user can see his/her blue spaceship and the Corona Invaders coming down and move from left to right.
+The challenge is to shoot all Corona Invaders with your lasers, before they hit your spaceship or reach the end of your grid.
 
 **Structure**
 
@@ -50,7 +51,7 @@ The challenge is to shoot all Corona Invaders.
 
 I created a wireframe using the program “Mockflow”. 
 
-![Wireframe](/images/Mockup%20wireframe.png)
+![Wireframe](assets/images/Mockup%20wireframe.png)
 
 **Surface**
 
@@ -66,18 +67,13 @@ I created a wireframe using the program “Mockflow”. 
 
 **Features**
 
-* Game Menu buttons
-
-The game menu reveals itself with two colourful menu buttons. When the user selects the "start Corona Invaders" and "how to play" button you notice a hover glow effect. 
+* Game Menu buttons. The game menu reveals itself with two colourful menu buttons. When the user selects the "start Corona Invaders" and "how to play" button you notice a hover glow effect. 
 When you get redirected to the Corona Invaders game page & how to play page, you can leave this page by pressing the EXIT button.
 The hover glow effect buttons were styled with the css code. 
 
-* Counting the score and see the result when you win or lose.
+* Scoreboard and result
 
-* Audio and music from the website [classing gaming][a]
-
-Exciting Space Invaders music in the background when you play the game. 
-Space Invaders sounds when you succesfully [hit the Corona Invaders][b] with your laser, when [YOU WIN][c] the game and when its [GAME OVER][d]. 
+* Audio and music from the website: [classing gaming.][a] You hear exciting Space Invaders music in the background when you play the game and Space Invaders sounds when you succesfully [hit the Corona Invaders][b] with your laser, when [YOU WIN][c] the game and when its [GAME OVER][d]. 
 
 **Testing**
 
@@ -85,10 +81,9 @@ All testing carried out was done manually.
 Testing problems I encountered:
 
 * My corona Invaders did not move and I could not shoot my lasers with my spaceship. 
-After feedback from my mentor I decided to start over with my Corona Invaders code. 
+After feedback from my mentor I decided to start over with my Corona Invaders code, because I did not really understood some of the code from [Coding Dojo][5]. 
+I watched a different tutorial from developer [Ania Kubów][0], which made me understand the JS code more on how to make a grid for the game and for example how const,functions, if/else statements and keyCodes worked in your code. 
 
-I watched a different tutorial from Ania Kubow , which made me understand the JS code more on how to make a grid for the game and for example how const,functions, if/else statements and keyCodes worked in your code. 
-So I learned a lot from her. 
 * Audio that I added in my game.js file did not work. I discovered that I had to remove the forward slash in my code, so I could properly load my audio.
 
 **Features Left to Implement**
@@ -124,7 +119,7 @@ I followed the next steps to deploy my game on the GitHub pages:
 *I used HTML, CSS and JS codes from these sources and edited it for my Corona Space Invaders Game:*
 
 * Code from the youtube tutorial from [Coding Dojo][5] about “ how to build a Space Invaders Game using only HTML, CSS & Javascript
-* Code from the youtoube tutorial from a developer named [Ania Kubow][6] : "Space Invaders in JavaScript, HTML and CSS Walkthrough!"
+* Code from the youtoube tutorial from a developer named [Ania Kubów][6] : "Space Invaders in JavaScript, HTML and CSS Walkthrough!"
 * Code from [codepen.io][7] to add a glowing hover effect to my game menu buttons.
 * Audio JS code from the youtoube tutorial from [code explained][8]: "Code The Snake Game Using JavaScript and HTML5"
 
@@ -137,6 +132,7 @@ I followed the next steps to deploy my game on the GitHub pages:
 [d]: <https://www.classicgaming.cc/classics/space-invaders/sounds>
 
 [DEMO]: <https://sweetzia.github.io/Corona-Invaders/index.html>
+[0]: <https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw>
 [1]: <https://kenney.nl/>
 [2]: <https://pngtree.com/freepng/hand-drawn-cartoon-bacteria-virus-microbe-corona-virus-image_5334155.html>
 [3]: <https://nl.wikipedia.org/wiki/Space_Invaders>
