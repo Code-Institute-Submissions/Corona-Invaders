@@ -60,6 +60,7 @@ body {
     border-radius: 10px;
     padding-left: 14px;
     margin-right: 200px;
+    margin-top: 10px;
 }
 
 .glow-on-hover:before {
