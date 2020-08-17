@@ -119,9 +119,6 @@ I followed the next steps to deploy my game on the GitHub pages:
 *I got inspiration from:*
 * The original [Space Invaders game][3]
 * Desktop mouse and keyboard controls on the website [MDN web docs][4]
-
-*I used HTML, CSS and JS codes from these sources and edited it for my Corona Space Invaders Game:*
-
 * Code from the youtube tutorial from [Coding Dojo][5] about “ how to build a Space Invaders Game using only HTML, CSS & Javascript
 * Code from the youtoube tutorial from a developer named [Ania Kubów][6] : "Space Invaders in JavaScript, HTML and CSS Walkthrough!"
 * Code from [codepen.io][7] to add a glowing hover effect to my game menu buttons.
