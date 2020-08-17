@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const squares = document.querySelectorAll(".grid div")
     const resultDisplay = document.querySelector("#result")
 
-    //The let statement declares a block-scoped local variable, optionally initializing it to a value.
-    // https://developer.mozilla.org/
+    //The let statement declares a block-scoped local variable and initializing it to a value.
     let width = 15;
     let currentSpaceShipIndex = 194
     let currentInvaderIndex = 0
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Draw the corona alien invaders. 
     // The forEach() method callbacks the invader array and add invader to my squares at 0 in currentInvaderIndex.
-    // with classList.add I add my pink corona invader
+    // with classList.add I added my pink corona invader
     coronaInvaders.forEach(invader => squares[currentInvaderIndex + invader].classList.add("invader"))
 
     // Draw the spaceship. 
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Move the corona aliens and put them in a time loop
     function moveCoronaInvaders() {
-        // Define left edge and right edge, so the corona invaders don't carry on outside the grid
+        // Defined left edge and right edge, so the corona invaders don't carry on outside the grid
         const leftEdge = coronaInvaders[0] % width === 0
         const rightEdge = coronaInvaders[coronaInvaders.length - 1] % width === width - 1
 
@@ -119,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (coronaInvaders[i] > (squares.length - (width - 1))) {
                 resultDisplay.textContent = 'Game Over'
                 clearInterval(invaderID)
-                // when are GAME OVER you hear an explosion sound and the gameMusic stops
+                // when you are GAME OVER you hear an explosion sound and the gameMusic stops
                 gameOver.play();
                 gameMusic.pause();
             }
