@@ -2,7 +2,7 @@ Corona Invaders Game
 ---------------------------------------
 **Interactive-frontend-project - Marjolein van Leeuwen**
 
-This is my Interactive Front-end Development project. I created my own Corona Invaders game which is based on the original game of Space Invaders ,created by Tomohiro Nishikado in 1978. 
+This is my Interactive Front-end Development project. I created my own Corona Invaders game which is based on the original game of Space Invaders, created by Tomohiro Nishikado in 1978. 
 And I got inspired bij the [#JavaScriptGames][0] from developer Ania Kubów. 
 
 Click [here][DEMO] for my deployed project.
@@ -35,6 +35,8 @@ This page is to provide users with quick access to the Corona Invaders game. The
 Press the "Play Corona Invaders" button and the game container will appear. 
 Wait for the game to begin. The user can see his/her blue spaceship and the Corona Invaders coming down and move from left to right.
 The challenge is to shoot all Corona Invaders with your lasers, before they hit your spaceship or reach the end of your grid.
+
+If you press "How to play" you will get a short tutorial about the game and which keys you need to use to play the game.
 
 **Structure**
 
@@ -86,8 +88,7 @@ I watched a different tutorial from developer [Ania Kubów][0], which made me un
 
 * I could not succeed in adding audio to my game. Until I learned how to add and load audio in your JS file through the youtube tutorial from [code explained][8]. 
 
-* In my JS code on line 32 I encountered a problem: .............................
-I don't know what this means
+* In my JS code on line 30 I encountered an "Uncaught TypeError: Cannot read property 'classList' of undefined". I was not able to fix this TypeError. 
 
 **Features Left to Implement**
 
