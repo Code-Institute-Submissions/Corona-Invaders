@@ -112,7 +112,8 @@ I followed the next steps to deploy my game on the GitHub pages:
 **Credits**
 
 * Media: I downloaded space assets on the website [kenney.com][1] ( a free game assets website).
-* I downloaded Corona virus microbes images from [Pngtree.com][2]
+* I downloaded Corona virus microbes images from [pngtree.com][2]
+* Audio and music from the website: [classing gaming.][a]
 
 **Acknowledgements**
 
